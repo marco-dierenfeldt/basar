@@ -1,0 +1,24 @@
+{
+  "name": "basar",
+  "version": "1.0.0",
+  "description": "Small app for Lists of products an pricetags for a basar.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marco-dierenfeldt/basar.git"
+  },
+  "keywords": [
+    "basar",
+    "list",
+    "pricetags"
+  ],
+  "author": "marco dierenfeldt",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/marco-dierenfeldt/basar/issues"
+  },
+  "homepage": "https://github.com/marco-dierenfeldt/basar#readme"
+}
