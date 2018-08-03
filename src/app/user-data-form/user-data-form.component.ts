@@ -11,6 +11,7 @@ export class UserDataFormComponent implements OnInit {
   private customerForm: FormGroup;
   private customer: Customer;
 
+
   constructor(private persistenceService: PersistenceService) {
   }
 
@@ -18,7 +19,7 @@ export class UserDataFormComponent implements OnInit {
     this.customerForm = new FormGroup({
       basarNumber: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
-      strreet: new FormControl('', Validators.required),
+      street: new FormControl('', Validators.required),
       houseNumber: new FormControl('', Validators.required),
       postalCode: new FormControl('', Validators.required),
       city: new FormControl('', Validators.required),
