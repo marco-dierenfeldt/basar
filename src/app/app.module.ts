@@ -1,5 +1,3 @@
-import { LsWarningComponent } from './user-data-form/ls-warning.component';
-import { AndroidBrowserHintComponent } from './user-data-form/android-browser-hint.component';
 import { DataPrivacyDisclaimerComponent } from './user-data-form/data-privacy-disclaimer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,9 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     UserDataFormComponent,
-    DataPrivacyDisclaimerComponent,
-    AndroidBrowserHintComponent,
-    LsWarningComponent
+    DataPrivacyDisclaimerComponent
   ],
   imports: [
     BrowserModule,

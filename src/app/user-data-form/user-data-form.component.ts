@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-user-data-form',
@@ -8,14 +8,14 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class UserDataFormComponent implements OnInit {
 
   customerForm = new FormGroup({
-      basarNumber: new FormControl(''),
-      name: new FormControl(''),
-      strreet: new FormControl(''),
-      houseNumber: new FormControl(''),
-      postalCode: new FormControl(''),
-      city: new FormControl(''),
-      phonenumber: new FormControl(''),
-      email: new FormControl('')
+      basarNumber: new FormControl('', Validators.required),
+      name: new FormControl('', Validators.required),
+      strreet: new FormControl('', Validators.required),
+      houseNumber: new FormControl('', Validators.required),
+      postalCode: new FormControl('', Validators.required),
+      city: new FormControl('', Validators.required),
+      phonenumber: new FormControl('', Validators.required),
+      email: new FormControl('', Validators.required)
     }
   );
 
