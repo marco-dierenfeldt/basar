@@ -1,6 +1,6 @@
 <div class="container" id="headerFormView">
   <div class="float-left h2">Benutzerstammdaten</div>
-  <form role="form" name="headerForm" [formGroup]="customerForm">
+  <form role="form" name="headerForm" [formGroup]="customerForm" (ngSubmit)="submitCustomerData()">
         <div class="row">
           <div class="form-group col-xs-4">
             <label for="basarNumber">Basar Nr.</label>
@@ -58,7 +58,7 @@
 
         <div class="row">
           <div class="form-group form-check col-xs-12">
-            <input type="checkbox" class="form-check-input" id="dataSecurityConfirmation">
+            <input type="checkbox" class="form-check-input" formControlName="dataSecurityConfirmation" id="dataSecurityConfirmation">
             <label class="form-check-label" for="dataSecurityConfirmation">
               Ich habe den <a data-toggle="modal" data-target="#modalDataSecurityHint">Datenschutzhinweis</a> gelesen
             </label>
@@ -67,7 +67,7 @@
 
         <div class="row">
           <div class="col-xs-12">
-            <button class="btn btn-primary" [disabled]="!customerForm.valid">
+            <button type="submit" class="btn btn-primary" [disabled]="!customerForm.valid">
               <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
               Abschicken
             </button>
