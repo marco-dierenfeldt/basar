@@ -13,9 +13,6 @@ export class UserDataFormComponent implements OnInit {
 
 
   constructor(private persistenceService: PersistenceService) {
-  }
-
-  ngOnInit() {
     this.customerForm = new FormGroup({
       basarNumber: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
@@ -27,6 +24,19 @@ export class UserDataFormComponent implements OnInit {
       email: new FormControl('', Validators.required),
       dataSecurityConfirmation: new FormControl('', Validators.required)
     });
+  }
+
+  ngOnInit() {
+    this.persistenceService.getGustomer().subscribe(
+      (customer) => {
+        console.info('load customer succesfull');
+        if (customer !== null) {
+          this.customerForm.setValue(customer);
+        }
+      },
+      (error) => {
+        console.warn('loade customer failed. ' + error);
+      });
   }
 
   private submitCustomerData() {
