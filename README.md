@@ -1,5 +1,5 @@
 # BasarApp
-Small app for Lists of products an pricetags for a basar.
+Small app for Customer data, Lists of products and pricetags for a basar.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
