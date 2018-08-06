@@ -9,6 +9,7 @@ import {localStorageProviders} from '@ngx-pwa/local-storage';
 import {RouterModule, Routes} from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { HeaderDataComponent } from './product-list/header-data/header-data.component';
 
 const appRoutes: Routes = [
   { path: 'userdata', component: UserDataFormComponent },
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     UserDataFormComponent,
     DataPrivacyDisclaimerComponent,
     PageNotFoundComponent,
-    ProductListComponent
+    ProductListComponent,
+    HeaderDataComponent
   ],
   imports: [
     RouterModule.forRoot(

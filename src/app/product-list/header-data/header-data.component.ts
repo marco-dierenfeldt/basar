@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import {PersistenceService} from '../service/persistence.service';
-import {Customer} from '../model/Customer';
+import {Component, Input, OnInit} from '@angular/core';
+import {Customer} from '../../model/Customer';
+import {PersistenceService} from '../../service/persistence.service';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html'
+  selector: 'app-header-data',
+  templateUrl: './header-data.component.html'
 })
-export class ProductListComponent implements OnInit {
+export class HeaderDataComponent implements OnInit {
 
-  customer:Customer;
-
+  customer: Customer;
   constructor(private persistenceService: PersistenceService) { }
 
   ngOnInit() {
