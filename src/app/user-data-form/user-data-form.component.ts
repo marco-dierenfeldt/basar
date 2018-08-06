@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {PersistenceService} from '../service/persistence.service';
 import {Customer} from '../model/Customer';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-data-form',
@@ -12,7 +13,7 @@ export class UserDataFormComponent implements OnInit {
   private customer: Customer;
 
 
-  constructor(private persistenceService: PersistenceService) {
+  constructor(private persistenceService: PersistenceService, private router: Router) {
     this.customerForm = new FormGroup({
       basarNumber: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
@@ -42,5 +43,6 @@ export class UserDataFormComponent implements OnInit {
   private submitCustomerData() {
     this.customer = this.customerForm.value as Customer;
     this.persistenceService.persistCustomer(this.customer);
+    this.router.navigate(['/list']);
   }
 }
