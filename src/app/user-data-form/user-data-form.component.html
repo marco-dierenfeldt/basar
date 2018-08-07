@@ -10,7 +10,7 @@
           <div class="form-group col-xs-8">
             <label for="customerName">Name</label>
             <input type="text" class="form-control" formControlName="name" name="customerName"
-                   id="customerName" placeholder="Name*" data-old="customer.name" required/>
+                   id="customerName" autocomplete="name" placeholder="Name*" data-old="customer.name" required/>
           </div>
         </div>
 
@@ -18,13 +18,13 @@
           <div class="form-group col-xs-8">
             <label for="customerStreet">Straße</label>
             <input type="text" class="form-control" formControlName="street" id="customerStreet" name="customerStreet"
-                   placeholder="Straße*" data-old="customer.street" required/>
+                   placeholder="Straße*" autocomplete="address-line1" data-old="customer.street" required/>
           </div>
           <div class="form-group col-xs-4">
             <label for="customerHouseNumber">Haus Nr.</label>
             <input type="text" class="form-control" formControlName="houseNumber" id="customerHouseNumber"
                    name="customerHouseNumber"
-                   placeholder="HausNr.*" data-old="customer.houseNumber" required/>
+                   placeholder="HausNr.*" autocomplete="address-line2" data-old="customer.houseNumber" required/>
           </div>
         </div>
 
@@ -33,12 +33,12 @@
             <label for="customerPostalcode">PLZ</label>
             <input type="text" class="form-control" formControlName="postalCode" id="customerPostalcode"
                    name="customerPostalcode"
-                   placeholder="PLZ*" data-old="customer.postalCode" required/>
+                   placeholder="PLZ*" autocomplete="postal-code" data-old="customer.postalCode" required/>
           </div>
           <div class="form-group col-xs-8">
             <label for="customerCity">Stadt</label>
             <input type="text" class="form-control" formControlName="city" id="customerCity" name="customerCity"
-                   placeholder="Stadt*" data-old="customer.city" required/>
+                   placeholder="Stadt*" autocomplete="address-level2" data-old="customer.city" required/>
           </div>
         </div>
 
@@ -47,12 +47,12 @@
             <label for="customerPhone">Telefonnummer</label>
             <input type="text" class="form-control" formControlName="phonenumber" id="customerPhone"
                    name="customerPhone"
-                   placeholder="Telefonnummer*" data-old="customer.phone" required/>
+                   placeholder="Telefonnummer*" autocomplete="tel" data-old="customer.phone" required/>
           </div>
           <div class="form-group col-xs-6">
             <label for="customerEmail">Emailadresse</label>
             <input type="email" class="form-control" formControlName="email" id="customerEmail" name="customerEmail"
-                   placeholder="Email*" data-old="customer.email" required/>
+                   placeholder="Email*" autocomplete="email" data-old="customer.email" required/>
           </div>
         </div>
 
