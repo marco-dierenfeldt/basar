@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {PersistenceService} from '../service/persistence.service';
-import {Customer} from '../model/Customer';
 import {Router} from '@angular/router';
+import {Customer} from '../model/basar-model';
 
 @Component({
   selector: 'app-user-data-form',

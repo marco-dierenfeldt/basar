@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Customer} from '../../model/Customer';
 import {PersistenceService} from '../../service/persistence.service';
+import {Customer} from '../../model/basar-model';
 
 @Component({
   selector: 'app-header-data',

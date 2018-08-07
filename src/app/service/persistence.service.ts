@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {LocalStorage} from '@ngx-pwa/local-storage';
-import {Customer} from '../model/Customer';
 import {Observable} from 'rxjs/index';
+import {Customer} from '../model/basar-model';
 
 @Injectable({
   providedIn: 'root'

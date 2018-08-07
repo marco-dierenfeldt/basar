@@ -10,6 +10,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { HeaderDataComponent } from './product-list/header-data/header-data.component';
+import { ProductListTableComponent } from './product-list/product-list-table/product-list-table.component';
 
 const appRoutes: Routes = [
   { path: 'userdata', component: UserDataFormComponent },
@@ -30,7 +31,8 @@ const appRoutes: Routes = [
     DataPrivacyDisclaimerComponent,
     PageNotFoundComponent,
     ProductListComponent,
-    HeaderDataComponent
+    HeaderDataComponent,
+    ProductListTableComponent
   ],
   imports: [
     RouterModule.forRoot(
