@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Product} from '../../model/basar-model';
 import {PersistenceService} from '../../service/persistence.service';
 
@@ -12,6 +12,16 @@ export class ProductListTableComponent implements OnInit {
   constructor(private persistenceService: PersistenceService) { }
 
   ngOnInit() {
+    this.persistenceService.getProductList().subscribe(
+      (productList) => {
+        console.info('load productList succesfull');
+        if (productList !== null) {
+          this.productList = productList;
+        }
+      },
+      (error) => {
+        console.warn('loade customer failed. ' + error);
+      });
   }
 
 }

@@ -14,6 +14,7 @@ export class UserDataFormComponent implements OnInit {
 
 
   constructor(private persistenceService: PersistenceService, private router: Router) {
+    this.customer = {} as Customer;
     this.customerForm = new FormGroup({
       basarNumber: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),

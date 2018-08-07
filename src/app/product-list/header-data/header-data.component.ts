@@ -9,7 +9,9 @@ import {Customer} from '../../model/basar-model';
 export class HeaderDataComponent implements OnInit {
 
   customer: Customer;
-  constructor(private persistenceService: PersistenceService) { }
+  constructor(private persistenceService: PersistenceService) {
+    this.customer = {} as Customer;
+  }
 
   ngOnInit() {
     this.persistenceService.getGustomer().subscribe(
