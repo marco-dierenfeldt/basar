@@ -9,7 +9,9 @@ import {PersistenceService} from '../../service/persistence.service';
 export class ProductListTableComponent implements OnInit {
   private productList: Product[];
 
-  constructor(private persistenceService: PersistenceService) { }
+  constructor(private persistenceService: PersistenceService) {
+    this.productList = [] as Product[];
+  }
 
   ngOnInit() {
     this.persistenceService.getProductList().subscribe(

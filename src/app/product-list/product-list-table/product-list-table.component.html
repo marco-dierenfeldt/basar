@@ -1,3 +1,20 @@
-<p>
-  product-list-table works!
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <table class="table table-striped">
+      <tr>
+        <th>LfdNo</th>
+        <th>Kategorie</th>
+        <th>Beschreibung</th>
+        <th>Größe</th>
+        <th>Preis</th>
+      </tr>
+      <tr *ngFor="let product of productList">
+        <td>{{product.lfdNo}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.size}}</td>
+        <td>{{product.price}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

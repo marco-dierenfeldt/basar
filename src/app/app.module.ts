@@ -11,6 +11,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProductListComponent } from './product-list/product-list.component';
 import { HeaderDataComponent } from './product-list/header-data/header-data.component';
 import { ProductListTableComponent } from './product-list/product-list-table/product-list-table.component';
+import { ProductEditorComponent } from './product-list/product-editor/product-editor.component';
 
 const appRoutes: Routes = [
   { path: 'userdata', component: UserDataFormComponent },
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     PageNotFoundComponent,
     ProductListComponent,
     HeaderDataComponent,
-    ProductListTableComponent
+    ProductListTableComponent,
+    ProductEditorComponent
   ],
   imports: [
     RouterModule.forRoot(

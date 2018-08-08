@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-xs-2">lfdNo</div>
+  <div class="col-xs-3">Kategorie</div>
+  <div class="col-xs-3">Beschreibung</div>
+  <div class="col-xs-1">Größe</div>
+  <div class="col-xs-2">Preis</div>
+  <div class="col-xs-1"></div>
+</div>
+<div class="row">
+  <div class="col-xs-2">
+    <input type="number" id="lfdNo" name="lfdNo" class="form-control input-sm">
+  </div>
+  <div class="col-xs-3">
+    <input type="text" id="category" name="category" class="form-control input-sm">
+  </div>
+  <div class="col-xs-3">
+    <input type="text" id="description" name="description" class="form-control input-sm">
+  </div>
+  <div class="col-xs-1">
+    <input type="text" id="size" name="size" maxlength="7" class="form-control input-sm">
+  </div>
+  <div class="col-xs-2">
+    <input type="text" id="price" name="price" class="form-control input-sm">
+  </div>
+  <div class="col-xs-1">
+    <button class="btn-primary btn-sm" type="button" ng-disabled="articleEntryForm.$invalid"
+            ng-click="addCurrentProduct()">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+    </button>
+  </div>
+</div>
