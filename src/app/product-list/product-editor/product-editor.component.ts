@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Configservice} from '../../service/config.service';
 
 @Component({
   selector: 'app-product-editor',
@@ -6,7 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductEditorComponent implements OnInit {
 
-  constructor() { }
+  categories: any;
+
+  constructor(private config: Configservice) {
+    this.categories = config.getCategories();
+
+  }
 
   ngOnInit() {
   }

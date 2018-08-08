@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { LocalStorageService } from './persistence.service';
+import {PersistenceService} from './persistence.service';
 
-describe('LocalStorageService', () => {
+describe('PersistenceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LocalStorageService]
+      providers: [PersistenceService]
     });
   });
 
-  it('should be created', inject([LocalStorageService], (service: LocalStorageService) => {
+  it('should be created', inject([PersistenceService], (service: PersistenceService) => {
     expect(service).toBeTruthy();
   }));
 });
