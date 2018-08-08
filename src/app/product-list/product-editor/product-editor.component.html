@@ -6,7 +6,8 @@
   <div class="form-group col-xs-3">
     <label for="category">Kategorie</label>
     <select class="form-control input-sm" id="category" name="category">
-      <option *ngFor="let category of categories">{{category}}</option>
+      <option selected>Bitte wählen...</option>
+      <option *ngFor="let category of categories">{{getValue(category)}}</option>
     </select>
   </div>
   <div class="form-group col-xs-3">
