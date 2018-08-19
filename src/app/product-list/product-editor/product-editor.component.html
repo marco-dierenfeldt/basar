@@ -1,31 +1,32 @@
-<div class="row">
+<form role="form" name="productForm" [formGroup]="productForm" (ngSubmit)="submitProductData()">
+  <div class="row">
   <div class="form-group col-xs-2">
     <label for="lfdNo">lfdNo</label>
-    <input type="number" id="lfdNo" name="lfdNo" class="form-control input-sm">
+    <input type="number" id="lfdNo" name="lfdNo" formControlName="lfdNo" class="form-control input-sm">
   </div>
   <div class="form-group col-xs-3">
     <label for="category">Kategorie</label>
-    <select class="form-control input-sm" id="category" name="category">
+    <select class="form-control input-sm" id="category" name="category"  formControlName="category">
       <option selected>Bitte wählen...</option>
       <option *ngFor="let category of categories">{{getValue(category)}}</option>
     </select>
   </div>
   <div class="form-group col-xs-3">
     <label for="description">Beschreibung</label>
-    <input type="text" id="description" name="description" class="form-control input-sm">
+    <input type="text" id="description" name="description"  formControlName="description" class="form-control input-sm">
   </div>
   <div class="form-group col-xs-1">
     <label for="size">Größe</label>
-    <input type="text" id="size" name="size" maxlength="7" class="form-control input-sm">
+    <input type="text" id="size" name="size" maxlength="7" formControlName="size" class="form-control input-sm">
   </div>
   <div class="form-group col-xs-2">
     <label for="price">Preis</label>
-    <input type="text" id="price" name="price" class="form-control input-sm">
+    <input type="text" id="price" name="price" formControlName="price" class="form-control input-sm">
   </div>
   <div class="col-xs-1">
-    <button class="btn-primary btn-sm" type="button" ng-disabled="articleEntryForm.$invalid"
-            ng-click="addCurrentProduct()">
+    <button class="btn-primary btn-sm" type="submit" [disabled]="!productForm.valid">
       <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
     </button>
   </div>
 </div>
+</form>

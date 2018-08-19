@@ -15,17 +15,17 @@ export class UserDataFormComponent implements OnInit {
 
   constructor(private persistenceService: PersistenceService, private router: Router) {
     this.customer = {} as Customer;
-    this.customerForm = new FormGroup({
-      basarNumber: new FormControl('', Validators.required),
-      name: new FormControl('', Validators.required),
-      street: new FormControl('', Validators.required),
-      houseNumber: new FormControl('', Validators.required),
-      postalCode: new FormControl('', Validators.required),
-      city: new FormControl('', Validators.required),
-      phonenumber: new FormControl('', Validators.required),
-      email: new FormControl('', Validators.required),
-      dataSecurityConfirmation: new FormControl('', Validators.required)
-    });
+      this.customerForm = new FormGroup({
+        basarNumber: new FormControl('', Validators.required, Validators.min(1)),
+        name: new FormControl('', Validators.required),
+        street: new FormControl('', Validators.required),
+        houseNumber: new FormControl('', Validators.required),
+        postalCode: new FormControl('', Validators.required),
+        city: new FormControl('', Validators.required),
+        phonenumber: new FormControl('', Validators.required),
+        email: new FormControl('', Validators.required),
+        dataSecurityConfirmation: new FormControl('', Validators.required)
+      });
   }
 
   ngOnInit() {
