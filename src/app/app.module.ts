@@ -1,17 +1,17 @@
-import {DataPrivacyDisclaimerComponent} from './user-data-form/data-privacy-disclaimer.component';
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { localStorageProviders } from '@ngx-pwa/local-storage';
+import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 
-import {AppComponent} from './app.component';
-import {UserDataFormComponent} from './user-data-form/user-data-form.component';
-import {ReactiveFormsModule} from '@angular/forms';
-import {localStorageProviders} from '@ngx-pwa/local-storage';
-import {RouterModule, Routes} from '@angular/router';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { HeaderDataComponent } from './product-list/header-data/header-data.component';
-import { ProductListTableComponent } from './product-list/product-list-table/product-list-table.component';
-import { ProductEditorComponent } from './product-list/product-editor/product-editor.component';
+import { DataPrivacyDisclaimerComponent } from './components/user-data-form/data-privacy-disclaimer.component';
+import { UserDataFormComponent } from './components/user-data-form/user-data-form.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { HeaderDataComponent } from './components/product-list/header-data/header-data.component';
+import { ProductListTableComponent } from './components/product-list/product-list-table/product-list-table.component';
+import { ProductEditorComponent } from './components/product-list/product-editor/product-editor.component';
 
 const appRoutes: Routes = [
   { path: 'userdata', component: UserDataFormComponent },

@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {PersistenceService} from '../service/persistence.service';
+import {PersistenceService} from '../../service/persistence.service';
 import {Router} from '@angular/router';
-import {Customer} from '../model/basar-model';
+import {Customer} from '../../model/basar-model';
 
 @Component({
   selector: 'app-user-data-form',
@@ -16,7 +16,7 @@ export class UserDataFormComponent implements OnInit {
   constructor(private persistenceService: PersistenceService, private router: Router) {
     this.customer = {} as Customer;
       this.customerForm = new FormGroup({
-        basarNumber: new FormControl('', Validators.required, Validators.min(1)),
+        basarNumber: new FormControl('', Validators.required),
         name: new FormControl('', Validators.required),
         street: new FormControl('', Validators.required),
         houseNumber: new FormControl('', Validators.required),

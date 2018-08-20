@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PersistenceService} from '../service/persistence.service';
+import {PersistenceService} from '../../service/persistence.service';
 
 @Component({
   selector: 'app-product-list',

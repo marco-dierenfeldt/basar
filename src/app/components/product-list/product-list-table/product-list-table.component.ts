@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Product} from '../../model/basar-model';
-import {PersistenceService} from '../../service/persistence.service';
+import {Product} from '../../../model/basar-model';
+import {PersistenceService} from '../../../service/persistence.service';
 
 @Component({
   selector: 'app-product-list-table',

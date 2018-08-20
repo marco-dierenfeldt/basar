@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Configservice, DefaultCategories} from '../../service/config.service';
+import {Configservice, DefaultCategories} from '../../../service/config.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -14,7 +14,7 @@ export class ProductEditorComponent implements OnInit {
   constructor(private config: Configservice) {
     this.categories = config.getCategories();
     this.productForm = new FormGroup({
-      lfdNo: new FormControl('', Validators.required, Validators.min(1)),
+      lfdNo: new FormControl('', Validators.required),
       category: new FormControl('', Validators.required),
       description: new FormControl('', Validators.required),
       size: new FormControl('', Validators.required),
@@ -27,6 +27,10 @@ export class ProductEditorComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  submitProductData() {
+    console.log('data: ' + this.productForm.getRawValue());
   }
 
 }
